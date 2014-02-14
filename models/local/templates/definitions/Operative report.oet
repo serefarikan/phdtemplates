@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>64a7dcb3-0d77-485c-90eb-c25f657da4d4</id>
+  <name>Operative report</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="Operative report">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.operation_record.v1" concept_name="Operation Record" path="/content">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]/items[at0036]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]/items[at0047]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]/items[at0042]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]/items[at0052]/items[at0053]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]/items[at0038]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" max="0" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.exam_generic.v1" concept_name="Examination Findings - Generic" path="/data[at0001]/events[at0002]/data[at0003]/items[at0037 and name/value='Operative details']/items[at0052 and name/value='Operation-specific details']/items[at0055]">
+        <Rule path="/items[at0004]" max="0" />
+        <Rule path="/items[at0001]" max="0" />
+        <Rule path="/items[at0003]" max="1" />
+        <Rule path="/items[at0005]" max="0" />
+      </Items>
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report.v1">
+    <digest id="MD5-CAM-1.0.1">88F460F92F80BBC99C78E88B92CAF457</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.operation_record.v1">
+    <digest id="MD5-CAM-1.0.1">9FCA8A5CE802AAB303EAB57C9A2C32E6</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.exam_generic.v1">
+    <digest id="MD5-CAM-1.0.1">1599A04562C62ACB1BABB8C4E1E2124A</digest>
+  </integrity_checks>
+</template>

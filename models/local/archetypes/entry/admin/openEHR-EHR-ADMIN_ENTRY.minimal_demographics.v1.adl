@@ -1,0 +1,99 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.minimal_demographics.v1
+
+concept
+	[at0000]	-- Minimal demographics
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2014-02-12">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record minimal patient demographics to support EHR querying by age. sex. locality etc">
+			use = <"Generally held with in the context of a single persistent composition.">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"4F019D9AD9E3A3DB8F21556FB894B4D5">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Minimal demographics
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Date of Birth
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Birth sex
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Administrative gender
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Locality name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Postcode
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Minimal demographics">
+					description = <"Minimal patient demographics to support EHR querying by age. sex. locality etc.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Date of Birth">
+					description = <"The patient's date of birth.">
+				>
+				["at0003"] = <
+					text = <"Birth sex">
+					description = <"The patient's biological sex at birth.">
+				>
+				["at0004"] = <
+					text = <"Administrative gender">
+					description = <"The patient's current admisitrative geneder.">
+				>
+				["at0005"] = <
+					text = <"Locality name">
+					description = <"The patient's current home locality.">
+				>
+				["at0006"] = <
+					text = <"Postcode">
+					description = <"The patient's current postal code.">
+				>
+			>
+		>
+	>

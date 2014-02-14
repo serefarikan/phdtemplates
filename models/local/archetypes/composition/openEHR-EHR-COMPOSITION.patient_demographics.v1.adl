@@ -1,0 +1,50 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.patient_demographics.v1
+
+concept
+	[at0000]	-- Patient demographics
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2014-02-12">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Carries minimal patient demographics as a single persistent composition to support EHR queying where a separate demographic service is not accessible by EHR/ AQL queries.">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"A19DDE89D0863352B9BB99FDF42B78B4">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Patient demographics
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::431]}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					comment = <"Minimal demographics to support EHR querying. ">
+					text = <"Patient demographics">
+					description = <"unknown">
+				>
+			>
+		>
+	>
