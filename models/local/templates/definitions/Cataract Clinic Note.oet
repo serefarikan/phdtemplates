@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>d7defe1f-60cb-4f68-bde8-1f0b0cb2c383</id>
+  <name>Cataract Clinic Note</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Cataract Clinic Note">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical Examination Findings" max="1" path="/content" name="Corneal examination">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0011]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0009]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0009]/items[at0008]" max="0" />
+      <Rule path="/protocol[at0007]" hide_on_form="true" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.exam_anterior_chamber.v1" concept_name="Examination Findings  -  Anterior Chamber" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]">
+        <Rule path="/items[at0012]" max="0" />
+        <Rule path="/items[at0020]" max="0" />
+        <Rule path="/items[at0021]" max="0" />
+        <Rule path="/items[at0007]" max="0" />
+        <Rule path="/items[at0014]" max="0" />
+        <Rule path="/items[at0008]" max="0" />
+        <Rule path="/items[at0002]" max="1" />
+      </Items>
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.refraction.v1" concept_name="Refraction assessment" path="/content">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134]/data[at0003]/items[at0039]" max="0" />
+      <Rule path="/data[at0001]/events[at0134]/data[at0003]/items[at0053]" max="1" />
+      <Rule path="/data[at0001]/events[at0134]/data[at0003]/items[at0040]" max="0" />
+      <Rule path="/data[at0001]/events[at0134]/state[at0041]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134]/state[at0041]/items[at0112]" max="0" />
+      <Rule path="/data[at0001]/events[at0134]/state[at0041]/items[at0042]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.fundoscopic_examination.v1" concept_name="Fundoscopic examination of eyes" path="/content">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0013]" hide_on_form="true" />
+      <Rule path="/protocol[at0028]" hide_on_form="true" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">10250E3AD051C33DB43D2DA76A272E08</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.exam.v1">
+    <digest id="MD5-CAM-1.0.1">80899BB6E9AEE27C4482EC7E74B6A755</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.exam_anterior_chamber.v1">
+    <digest id="MD5-CAM-1.0.1">A6E3F361903B9034060D8A1CCAD985B2</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.refraction.v1">
+    <digest id="MD5-CAM-1.0.1">1FC072ECEFE11FA70A8F99BAEC6B2282</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.fundoscopic_examination.v1">
+    <digest id="MD5-CAM-1.0.1">8672B970A4F25159143669911521191F</digest>
+  </integrity_checks>
+</template>

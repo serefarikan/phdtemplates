@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>ecb51f16-3caf-4427-9463-92f795899833</id>
+  <name>Post-op Follow-up Clinic</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Post-op Follw-up clinic">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.visual_acuity.v1" concept_name="Visual acuity" max="1" path="/content" name="Post-operative visual acuity">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134]" max="1" hide_on_form="true" name="Unaided" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0138]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0135</excludedValues>
+          <excludedValues>local::at0136</excludedValues>
+          <excludedValues>local::at0137</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0039]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0055]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0028]/items[at0009]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0028]/items[at0057]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0028]/items[at0011]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0028]/items[at0046]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0028]/items[at0015]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0059]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0010]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0053]/items[at0066]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0054]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/data[at0003]/items[at0040]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/state[at0041]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/state[at0041]/items[at0112]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Unaided']/state[at0041]/items[at0042]" max="0" />
+      <Rule path="/data[at0001]/events[at0134]" max="1" clone="true" name="pinhole" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0138]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0136</excludedValues>
+          <excludedValues>local::at0137</excludedValues>
+          <excludedValues>local::at0139</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0039]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0055]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0028]/items[at0009]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0028]/items[at0057]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0028]/items[at0011]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0028]/items[at0046]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0028]/items[at0015]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0059]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0010]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0053]/items[at0066]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0054]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/data[at0003]/items[at0040]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/state[at0041]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/state[at0041]/items[at0112]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='pinhole']/state[at0041]/items[at0042]" max="0" />
+      <Rule path="/data[at0001]/events[at0134]" max="1" clone="true" name="Best corrected" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0138]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0135</excludedValues>
+          <excludedValues>local::at0136</excludedValues>
+          <excludedValues>local::at0139</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0039]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0055]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0028]/items[at0009]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0028]/items[at0057]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0028]/items[at0011]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0028]/items[at0046]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0028]/items[at0015]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0059]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0010]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0053]/items[at0066]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/data[at0003]/items[at0054]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/state[at0041]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/state[at0041]/items[at0112]" max="0" />
+      <Rule path="/data[at0001]/events[at0134 and name/value='Best corrected']/state[at0041]/items[at0042]" max="0" />
+      <Rule path="/protocol[at0020]" hide_on_form="true" />
+      <Rule path="/protocol[at0020]/items[at0081]" max="0" />
+      <Rule path="/protocol[at0020]/items[at0023]" max="0" />
+      <Rule path="/protocol[at0020]/items[at0021]" max="0" />
+      <Rule path="/protocol[at0020]/items[at0022]" max="0" />
+      <Rule path="/protocol[at0020]/items[at0092]" max="0" />
+      <Rule path="/protocol[at0020]/items[at0117]" max="0" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">10250E3AD051C33DB43D2DA76A272E08</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.visual_acuity.v1">
+    <digest id="MD5-CAM-1.0.1">C49A0A66AB60A25B4DB64B675810B486</digest>
+  </integrity_checks>
+</template>
